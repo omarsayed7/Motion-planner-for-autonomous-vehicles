@@ -252,10 +252,14 @@ class BehaviouralPlanner:
             return wp_index
 
         # Otherwise, find our next waypoint.
-        # TODO: INSERT YOUR CODE BETWEEN THE DASHED LINES
+        # DONE: INSERT YOUR CODE BETWEEN THE DASHED LINES
         # ------------------------------------------------------------------
-        # while wp_index < len(waypoints) - 1:
-        #   arc_length += ...
+        while wp_index < len(waypoints) - 1:
+            arc_length += np.sqrt((waypoints[wp_index][0] - waypoints[wp_index+1][0])**2 + (waypoints[wp_index][1] - waypoints[wp_index +1][1])**2)
+            if arc_length >= self._lookahead:
+                return wp_index+1 #next to the closest index point
+            else:
+                wp_index += 1
         # ------------------------------------------------------------------
 
         return wp_index
@@ -336,7 +340,7 @@ class BehaviouralPlanner:
                     return goal_index, True
 
         return goal_index, False
-                
+                np
     # Checks to see if we need to modify our velocity profile to accomodate the
     # lead vehicle.
     def check_for_lead_vehicle(self, ego_state, lead_car_position):
