@@ -340,7 +340,6 @@ class BehaviouralPlanner:
                     return goal_index, True
 
         return goal_index, False
-                np
     # Checks to see if we need to modify our velocity profile to accomodate the
     # lead vehicle.
     def check_for_lead_vehicle(self, ego_state, lead_car_position):
