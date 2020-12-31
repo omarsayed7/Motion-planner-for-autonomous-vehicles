@@ -178,7 +178,7 @@ class CollisionChecker:
                         if not collision_check_array[j]:
                             # DONE: INSERT YOUR CODE BETWEEN THE DASHED LINES
                             # --------------------------------------------------
-                            score += self._weight * * paths[i][2][j]
+                            score += self._weight * paths[i][2][j]
                             # --------------------------------------------------
 
                             pass
