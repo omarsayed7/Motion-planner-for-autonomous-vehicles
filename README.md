@@ -1,5 +1,6 @@
 # Motion-planner-for-autonomous-vehicles
-Final Project of Course 4 of Self-Driving Cars Specialization from University of Toronto
+Final Project of Course 4 of Self-Driving Cars Specialization from University of Toronto.
+All the course materials will be provided here, [Self-Driving Cars Specialization](https://www.coursera.org/specializations/self-driving-cars)
 There are 5 main aspects of the planner you will need to implement, behaviour planning logic, path generation, static collision checking, path selection, and velocity profile generation. Let's go over each of these in kind.
 
 ## Behaviour Planning Logic:
@@ -16,13 +17,14 @@ For the path generation section of the project, the majority of the mathematical
 
 For this part of the motion planner, we will be editing collision_checker.py. In particular, we're going to be implementing circle-based collision checking on our computed path set using the collision_check() function. You will implement the circle location calculation for each point on the path. For futher details, please refer to the given code comments.
 
-# Path Selection:
+## Path Selection:
 
 
 The path selection portion of the project involves you evaluating an objective function over the generated path set to select the best path. The goal of this section is to eliminate paths that are in collision with static obstacles, and to select paths that both track the centerline of the global path. To encourage robust obstacle avoidance, we will also need to add a term that penalizes how close the planned path is to other paths in the path set that are in collision with a static obstacle. You will implement path selection in the select_best_path_index() function within collision_checker.py. For further details, please refer to the given code comments.
 
-# Velocity Profile Generation:
+## Velocity Profile Generation:
 
 
-The last step of the project is velocity profile generation. This velocity planner will not handle all edge cases, but will handle stop signs, lead dynamic obstacles, as well as nominal lane maintenance. This is all captured in the compute_velocity_profile() function in velocity_planner.py. You will be implementing the physics functions at the end of the file which will be used for velocity planning. For further details, please refer to the given code comments. Please complete all TODOs for this assignment.
+The last step of the project is velocity profile generation. This velocity planner will not handle all edge cases, but will handle stop signs, lead dynamic obstacles, as well as nominal lane maintenance. This is all captured in the compute_velocity_profile() function in velocity_planner.py. You will be implementing the physics functions at the end of the file which will be used for velocity planning. For further details, please refer to the given code comments.
+
 
